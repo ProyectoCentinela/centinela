@@ -69,7 +69,7 @@ const AppNavigator = () => {
           headerTitleAlign: 'center',
         }}/>
 
-<Stack.Screen name="RegistroEmergencia" component={RegistroEmergencia} options={{
+      <Stack.Screen name="RegistroEmergencia" component={RegistroEmergencia} options={{
           title:'Registro del contacto de emergencia',
           headerStyle:{
             backgroundColor:'#365B6D',

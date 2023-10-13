@@ -11,20 +11,30 @@ const Opcion = ({ navigation }) => {
 
   return (
     <View style={styles.container}>
-      <TouchableOpacity onPress={() => navigation.navigate('InfoUsuario')} style={styles.buttonContainer}>
-        <Image
-          source={require('./img/sos.png')}
-          style={styles.buttonImage}
-        />
-      </TouchableOpacity>
-      <Button color="#365B6D"
-          title="Informacion del carro"
-          onPress={() => navigation.navigate('InfoCarro')}
-        />
-        <Button color="#365B6D"
-          title="Informacion del usuario de emergencia"
-          onPress={() => navigation.navigate('InfoEmergencia')}
-        />
+      <Button
+        color="#365B6D"
+        title="Informacion del carro"
+        onPress={() => navigation.navigate('InfoCarro')}
+      />
+      <Button
+        color="#365B6D"
+        title="Informacion del usuario de emergencia"
+        onPress={() => navigation.navigate('InfoEmergencia')}
+      />
+      <View style={styles.barra}>
+        <TouchableOpacity onPress={() => navigation.navigate('InfoUsuario')} style={styles.buttonContainer}>
+          <Image
+            source={require('./img/sos.png')}
+            style={styles.buttonImage}
+          />
+        </TouchableOpacity>
+        <TouchableOpacity onPress={() => navigation.navigate('InfoUsuario')} style={styles.buttonContainer}>
+          <Image
+            source={require('./img/sos.png')}
+            style={styles.buttonImage}
+          />
+        </TouchableOpacity>
+      </View>
     </View>
   );
 };
@@ -32,22 +42,31 @@ const Opcion = ({ navigation }) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
-    
+  },
+  barra: {
+    height: 60,
+    width: '100%',
+    backgroundColor: "#365B6D",
+    flexDirection: 'row', // Cambia a 'row' para alinear los elementos horizontalmente
+    justifyContent: 'space-between', // Alinea los elementos en los extremos
+    alignItems: 'center',
+    position: 'absolute',
+    bottom: 0,
   },
   buttonContainer: {
-    width: 300, // Ancho deseado del botón
-    height: 300, // Altura deseada del botón
-    borderRadius: 150, // La mitad del ancho o altura para hacerlo redondo
-    backgroundColor: 'lightblue', // Color de fondo del botón
-    justifyContent: 'center', // Alineación vertical
-    alignItems: 'center', // Alineación horizontal
+    marginHorizontal:10,
+    width: 45,
+    height: 45,
+    borderRadius: 22.5,
+    backgroundColor: 'lightblue',
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   buttonImage: {
-    width: 300, // Ancho deseado de la imagen dentro del botón
-    height: 300, // Altura deseada de la imagen dentro del botón
+    width: 45,
+    height: 45,
   },
 });
 
