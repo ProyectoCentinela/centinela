@@ -11,6 +11,7 @@ import MenuPrincipal from './menuPrincipal';
 import InfoUsuario from './infoUsuario';
 import InfoCarro from './infoCarro';
 import InfoEmergencia from './infoEmergencia';
+import ErroresCarro from './erroresCarro';
 
 
 
@@ -100,6 +101,15 @@ const AppNavigator = () => {
           headerTintColor: 'white', // Cambia el color del texto en la barra de navegación
           headerTitleAlign: 'center',
         }}/>
+        <Stack.Screen name="ErroresCarro" component={ErroresCarro} options={{
+          title:'Errores del vehiculo',
+          headerStyle:{
+            backgroundColor:'#365B6D',
+          },
+          headerTintColor: 'white', // Cambia el color del texto en la barra de navegación
+          headerTitleAlign: 'center',
+        }}/>
+        
          
       </Stack.Navigator>
     </NavigationContainer>

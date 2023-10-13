@@ -28,6 +28,10 @@ const registroUsuario = ({navigation}) => {
           title="Editar"
           onPress={() => navigation.navigate('RegistroCarro')}
         />
+        <Button color="#365B6D"
+          title="errores del carro"
+          onPress={() => navigation.navigate('ErroresCarro')}
+        />
         
 
     </View>
