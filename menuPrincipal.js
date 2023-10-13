@@ -24,13 +24,13 @@ const Opcion = ({ navigation }) => {
       <View style={styles.barra}>
         <TouchableOpacity onPress={() => navigation.navigate('InfoUsuario')} style={styles.buttonContainer}>
           <Image
-            source={require('./img/sos.png')}
+            source={require('./img/advertencia.png')}
             style={styles.buttonImage}
           />
         </TouchableOpacity>
         <TouchableOpacity onPress={() => navigation.navigate('InfoUsuario')} style={styles.buttonContainer}>
           <Image
-            source={require('./img/sos.png')}
+            source={require('./img/notificacion.png')}
             style={styles.buttonImage}
           />
         </TouchableOpacity>
@@ -60,7 +60,7 @@ const styles = StyleSheet.create({
     width: 45,
     height: 45,
     borderRadius: 22.5,
-    backgroundColor: 'lightblue',
+    backgroundColor: 'white',
     justifyContent: 'center',
     alignItems: 'center',
   },
