@@ -33,7 +33,7 @@ const AppNavigator = () => {
         }}
          />
          <Stack.Screen name="MenuPrincipal" component={MenuPrincipal} options={{
-          title:'Centinela: tu seguridad, nuestra preocupación',
+          title:'Centinela: tu seguridad',
           headerStyle:{
             backgroundColor:'#365B6D',
           },
@@ -109,8 +109,7 @@ const AppNavigator = () => {
           headerTintColor: 'white', // Cambia el color del texto en la barra de navegación
           headerTitleAlign: 'center',
         }}/>
-        
-         
+       
       </Stack.Navigator>
     </NavigationContainer>
   );
