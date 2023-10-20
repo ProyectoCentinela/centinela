@@ -19,19 +19,26 @@ const registroUsuario = ({navigation}) => {
             style={styles.img }
             source={require("./img/iconoCarro.png")}
           />
-          <Text style={styles.text}>Marca:</Text><Text style={styles.text}>xxxx</Text>
-          <Text style={styles.text}>Modelo:</Text><Text style={styles.text}>xxxx</Text>
-          <Text style={styles.text}>Año:</Text><Text style={styles.text}>xxxx</Text>
-          <Text style={styles.text}>VIN:</Text><Text style={styles.text}>xxxx</Text>
-          <Text style={styles.text}>Matricula:</Text><Text style={styles.text}>xxxx</Text>  
-          <Button color="#365B6D"
-          title="Editar"
-          onPress={() => navigation.navigate('RegistroCarro')}
-        />
-        <Button color="#365B6D"
-          title="errores del carro"
-          onPress={() => navigation.navigate('ErroresCarro')}
-        />
+          <Text style={styles.text}>Marca:</Text><Text style={styles.textNormal}>xxxx</Text>
+          <Text style={styles.text}>Modelo:</Text><Text style={styles.textNormal}>xxxx</Text>
+          <Text style={styles.text}>Año:</Text><Text style={styles.textNormal}>xxxx</Text>
+          <Text style={styles.text}>VIN:</Text><Text style={styles.textNormal}>xxxx</Text>
+          <Text style={styles.text}>Matricula:</Text><Text style={styles.textNormal}>xxxx</Text>  
+          <View style={styles.contenedorBotones}>
+            <Button color="#365B6D"
+            title="Editar"
+            onPress={() => navigation.navigate('Editar información')}
+            />
+            <Button color="#365B6D"
+              title="Vincular con vehiculo"
+              onPress={() => navigation.navigate('Editar información')}
+            />
+            <Button color="#365B6D"
+              title="errores del carro"
+              onPress={() => navigation.navigate('ErroresCarro')}
+            />
+          </View>
+          
         
 
     </View>
@@ -53,9 +60,20 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     padding: 10,
   },
+  contenedorBotones: {
+    flex: 2,
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+    padding: 10,
+  },
   text:{
     fontSize:20,
     fontWeight:'bold',
+    marginBottom:30,
+  },
+  textNormal:{
+    fontSize:20,
     marginBottom:30,
   },
   body: {

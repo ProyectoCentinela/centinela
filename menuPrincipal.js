@@ -11,29 +11,41 @@ const Opcion = ({ navigation }) => {
 
   return (
     <View style={styles.container}>
-      <Button
-        color="#365B6D"
-        title="Informacion del carro"
-        onPress={() => navigation.navigate('InfoCarro')}
-      />
-      <Button
-        color="#365B6D"
-        title="Informacion del usuario de emergencia"
-        onPress={() => navigation.navigate('InfoEmergencia')}
-      />
+       <TouchableOpacity onPress={() => navigation.navigate('InfoUsuario')} style={styles.botonImagen}>
+          <Image
+            source={require('./img/user.png')}
+            style={styles.botonImg}
+          />
+        </TouchableOpacity>
+        <Text style={styles.texto}>Usuario</Text>
+        <TouchableOpacity onPress={() => navigation.navigate('InfoEmergencia')} style={styles.botonImagen}>
+          <Image
+            source={require('./img/emergencia.png')}
+            style={styles.botonImg}
+          />
+        </TouchableOpacity>
+        <Text style={styles.texto}>Contacto de emergencia</Text>
+        <TouchableOpacity onPress={() => navigation.navigate('InfoCarro')} style={styles.botonImagen}>
+          <Image
+            source={require('./img/iconoCarro.png')}
+            style={styles.botonImg}
+          />
+        </TouchableOpacity>
+        <Text style={styles.texto}>Vehiculo</Text>
       <View style={styles.barra}>
-        <TouchableOpacity onPress={() => navigation.navigate('InfoUsuario')} style={styles.buttonContainer}>
+        <TouchableOpacity onPress={() => navigation.navigate('')} style={styles.buttonContainer}>
           <Image
             source={require('./img/advertencia.png')}
             style={styles.buttonImage}
           />
         </TouchableOpacity>
-        <TouchableOpacity onPress={() => navigation.navigate('InfoUsuario')} style={styles.buttonContainer}>
+        <TouchableOpacity onPress={() => navigation.navigate('')} style={styles.buttonContainer}>
           <Image
             source={require('./img/notificacion.png')}
             style={styles.buttonImage}
           />
         </TouchableOpacity>
+
       </View>
     </View>
   );
@@ -44,6 +56,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
+    backgroundColor:'white',
   },
   barra: {
     height: 60,
@@ -60,13 +73,31 @@ const styles = StyleSheet.create({
     width: 45,
     height: 45,
     borderRadius: 22.5,
-    backgroundColor: 'white',
+    backgroundColor: "#365B6D",
     justifyContent: 'center',
     alignItems: 'center',
   },
   buttonImage: {
     width: 45,
     height: 45,
+  },
+  botonImagen: {
+    marginHorizontal:10,
+    width: 150,
+    height: 150,
+    borderRadius: 75,
+    backgroundColor: 'white',
+    justifyContent: 'center',
+    alignItems: 'center',
+   
+  },
+  botonImg: {
+    width: 100,
+    height: 100,
+    
+  },
+  texto:{
+    marginBottom:50,
   },
 });
 

@@ -21,10 +21,10 @@ const infoEmergencia = ({navigation}) => {
             style={styles.img }
             source={require("./img/iconoEmergencia.png")}
           />
-          <Text style={styles.text}>Nombre:</Text><Text style={styles.text}>xxxx</Text>
-          <Text style={styles.text}>Apellido:</Text><Text style={styles.text}>xxxx</Text>
-          <Text style={styles.text}>Teléfono:</Text><Text style={styles.text}>xxxx</Text>
-          <Text style={styles.text}>Parentesco:</Text><Text style={styles.text}>xxxx</Text>
+          <Text style={styles.text}>Nombre:</Text><Text style={styles.textNormal}>xxxx</Text>
+          <Text style={styles.text}>Apellido:</Text><Text style={styles.textNormal}>xxxx</Text>
+          <Text style={styles.text}>Teléfono:</Text><Text style={styles.textNormal}>xxxx</Text>
+          <Text style={styles.text}>Parentesco:</Text><Text style={styles.textNormal}>xxxx</Text>
           
           <Button color="#365B6D"
           title="Editar"
@@ -54,6 +54,10 @@ const styles = StyleSheet.create({
   text:{
     fontSize:20,
     fontWeight:'bold',
+    marginBottom:30,
+  },
+  textNormal:{
+    fontSize:20,
     marginBottom:30,
   },
   body: {

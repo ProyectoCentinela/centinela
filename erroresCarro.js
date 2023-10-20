@@ -42,8 +42,8 @@ const erroresCarro = ({ navigation }) => {
 
         <Button
           color="#365B6D"
-          title="Editar"
-          onPress={() => navigation.navigate('RegistroCarro')}
+          title="Actualizar"
+          onPress={() => navigation.navigate(' ')}
         />
       </View>
   );

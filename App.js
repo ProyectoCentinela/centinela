@@ -109,6 +109,7 @@ const AppNavigator = () => {
           headerTintColor: 'white', // Cambia el color del texto en la barra de navegación
           headerTitleAlign: 'center',
         }}/>
+     
        
       </Stack.Navigator>
     </NavigationContainer>
