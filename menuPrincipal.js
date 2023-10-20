@@ -11,31 +11,23 @@ const Opcion = ({ navigation }) => {
 
   return (
     <View style={styles.container}>
-       <TouchableOpacity onPress={() => navigation.navigate('InfoUsuario')} style={styles.botonImagen}>
-          <Image
-            source={require('./img/user.png')}
-            style={styles.botonImg}
-          />
-        </TouchableOpacity>
-        <Text style={styles.texto}>Usuario</Text>
-        <TouchableOpacity onPress={() => navigation.navigate('InfoEmergencia')} style={styles.botonImagen}>
-          <Image
-            source={require('./img/emergencia.png')}
-            style={styles.botonImg}
-          />
-        </TouchableOpacity>
-        <Text style={styles.texto}>Contacto de emergencia</Text>
-        <TouchableOpacity onPress={() => navigation.navigate('InfoCarro')} style={styles.botonImagen}>
-          <Image
-            source={require('./img/iconoCarro.png')}
-            style={styles.botonImg}
-          />
-        </TouchableOpacity>
-        <Text style={styles.texto}>Vehiculo</Text>
+       
       <View style={styles.barra}>
         <TouchableOpacity onPress={() => navigation.navigate('')} style={styles.buttonContainer}>
           <Image
             source={require('./img/advertencia.png')}
+            style={styles.buttonImage}
+          />
+        </TouchableOpacity>
+        <TouchableOpacity onPress={() => navigation.navigate('InfoUsuario')} style={styles.buttonContainer}>
+          <Image
+            source={require('./img/userB.png')}
+            style={styles.buttonImage}
+          />
+        </TouchableOpacity>
+        <TouchableOpacity onPress={() => navigation.navigate('InfoCarro')} style={styles.buttonContainer}>
+          <Image
+            source={require('./img/iconoCarro.png')}
             style={styles.buttonImage}
           />
         </TouchableOpacity>
@@ -45,7 +37,6 @@ const Opcion = ({ navigation }) => {
             style={styles.buttonImage}
           />
         </TouchableOpacity>
-
       </View>
     </View>
   );
@@ -59,7 +50,7 @@ const styles = StyleSheet.create({
     backgroundColor:'white',
   },
   barra: {
-    height: 60,
+    height: 70,
     width: '100%',
     backgroundColor: "#365B6D",
     flexDirection: 'row', // Cambia a 'row' para alinear los elementos horizontalmente
@@ -73,13 +64,13 @@ const styles = StyleSheet.create({
     width: 45,
     height: 45,
     borderRadius: 22.5,
-    backgroundColor: "#365B6D",
+    backgroundColor: 'white',
     justifyContent: 'center',
     alignItems: 'center',
   },
   buttonImage: {
-    width: 45,
-    height: 45,
+    width: 30,
+    height: 30,
   },
   botonImagen: {
     marginHorizontal:10,
